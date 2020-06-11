@@ -1,7 +1,7 @@
 import socket
 
 TLDS1_hostname = "ilab1.cs.rutgers.edu"
-TLDS2_hostname = "ilab1.cs.rutgers.edu"
+TLDS2_hostname = "ilab2.cs.rutgers.edu"
 
 
 RootServerPort = 5001; #Root port or aythentication server port
