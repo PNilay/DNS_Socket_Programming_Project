@@ -1,6 +1,9 @@
 # DNS Socket Programming Project  
 In this project the DNS (Domain Name System) is implemented with the Authentication Server. The prject is divided into four different parts; client server, authentication server, and two TLDS (Top Level Domain Server). Each server communicate with each other using the sockets created between them. The client DNS uses a key and a challenge string to create a digest and sends the challenge string as well as the digest to the authentication server. Authentication server then sends only the challenge string to both TLDS servers, and in return TLDS servers send their respective digest for thee challenge string. Authentication server compares digest sent from Client with both diests sent by the TLDS, and decides which responce from TLDS server match the digest sent by client server. The Authentication server sends the hostname of the TLDS server with the correct match to the client. The DNS client then connects to that TLDS server with a query string and obtains the A record (if found) from the authenticated TLDS server.  
 A brief sketch of the interaction among the programs can be shown as:   
-<img src="/Images/Sketch.PNG">
+<img src="/Images/Sketch.PNG">  
+Both TLDS1 and TLDS2, each maintain a DNS_tablee consisting of three fields (hostname, IP adress, Flag) and a key which is use to create a digest from a challenge. 
+
+The two TS servers each maintain a DNS_table consisting of three fields: Hostname, IP address, Flag (A). In addition, the TS servers each maintain a key which is used to create a digest from a challenge . When the DNS client connects to the authenticated TLDS server, it sends the hostname as a string. The TLDS server does a look up in the DNS_table and if there is a match, sends the DNS table entry as a string [“Hostname IPaddress A”]. If the host name does not exist then an error string Error: HOST NOT FOUND is returned. Note, that in this Project, the DNS client connects to the TLDS server to get the IP address for a given hostname.
 
 
