@@ -1,2 +1,2 @@
 # DNS Socket Programming Project  
-In this project the DNS (Domain Name System) is implemented with the Authentication Server. the prject is divided into four different parts; client server, authentication server, and two TLDS (Top Level Domain Server).
+In this project the DNS (Domain Name System) is implemented with the Authentication Server. The prject is divided into four different parts; client server, authentication server, and two TLDS (Top Level Domain Server). Each server communicate with each other using the sockets created between them. The client DNS uses a key and a challenge string to create a digest and sends the challenge string as well as the digest to the authentication server.
