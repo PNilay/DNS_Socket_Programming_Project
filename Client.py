@@ -2,7 +2,7 @@ import socket
 import hmac
 
 TLDS1_hostname = "ilab1.cs.rutgers.edu"
-TLDS2_hostname = "ilab1.cs.rutgers.edu"
+TLDS2_hostname = "ilab2.cs.rutgers.edu"
 
 
 portc = 5000
