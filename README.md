@@ -18,6 +18,6 @@ python RSserver.py
 ```
 python Client.py
 ```
-
+The hostname along with the key of TLDS server is given one per line in a file "PROJ3_HNS.txt" (Input to this program). Files PROJ3-KEY1.txt" and "PROJ2-KEY2.txt" stores the key of the TLDS server (without this key client can not request the IP adress of desired hostname), which is used by the TLDS program. "PROJ3-TLDS1.txt" and "PROJ3-TLDS2.txt" stores the hostname along with it's ip adress, from which TLDS servers provides the ip adress of desired hostname to client server. The client program output the result of the "PROJ3_HNS.txt" to a file "RESOLVED.txt".
 
 
