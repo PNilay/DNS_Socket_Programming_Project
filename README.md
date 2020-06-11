@@ -5,7 +5,19 @@ A brief sketch of the interaction among the programs can be shown as:
 Both TLDS1 and TLDS2, each maintain a DNS_table consisting of three fields (hostname, IP adress, Flag) and a key which is use to create a digest from a challenge. When Client connects to the authentication server, it sends back the hostname of correctly matched digest TLDS. Using a returned hostname of the top level domain server, client makes connection to that TLDS server to get the IP adress of desired hostname. The TLDS server look up in it's DNS_table and if there is a mathch, sends the DNS table entry as  string, otherwise returns "Error: hOST NOT FOUND".  
 ### Usage
 To run this project at least two different devices are required, since both TLDS servers can not be run on same device.  
-First change the hostname of the TLDS1 and TLDS2 servers in Client.py (line 4 and 5), and RSserver (line 3 and 4) with your own hostnames.
+First change the hostname of the TLDS1 and TLDS2 servers in Client.py (line 4 and 5), and RSserver (line 3 and 4) with your own hostnames. Start the two TLDS servers, then the Authentication server and then the client program, form the command lines.  
+```
+python TLDS1.py
+```
+```
+python TLDS2.py
+```
+```
+python RSserver.py
+```
+```
+python Client.py
+```
 
 
 
