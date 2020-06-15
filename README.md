@@ -9,6 +9,7 @@ Both TLDS1 and TLDS2, each maintain a DNS_table consisting of three fields (host
 ### Usage
 To run this project at least two different devices are required, since both TLDS servers can not be run on the same device.  
 First change the hostname of the TLDS1 and TLDS2 servers in Client.py (line 4 and 5), and RSserver (line 3 and 4) with your own hostnames. Start the two TLDS servers, then the Authentication server and lastly the client program form the command lines.  
+
 ```
 python TLDS1.py
 ```
@@ -21,4 +22,8 @@ python RSserver.py
 ```
 python Client.py
 ```
+* The hostname along with the key of TLDS server is given one per line in a file "PROJ3_HNS.txt" which serves as Input to this program.
+* Files PROJ3-KEY1.txt" and "PROJ2-KEY2.txt" stores the key of the TLDS server without this key client can not request the IP address of desired hostname, which is used by the TLDS programs. 
+* "PROJ3-TLDS1.txt" and "PROJ3-TLDS2.txt" stores the hostname along with its ip address, from which TLDS servers provides the ip address of desired hostname to client server.
+* The client program output the result of the "PROJ3_HNS.txt" to a file "RESOLVED.txt".
 
